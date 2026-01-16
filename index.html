@@ -256,10 +256,18 @@
         </div>
         <body>
 
-<audio id="bg-music" autoplay loop>
+<audio autoplay loop muted id="music">
     <source src="contoh.mp3" type="audio/mpeg">
-    Browser kamu tidak mendukung audio.
-    </audio>
+</audio>
+
+<script>
+    window.onload = () => {
+        const music = document.getElementById("music");
+        music.muted = false;
+        music.volume = 0.5;
+    }
+</script>
+
             
 
         <div class="contact-form">
@@ -283,6 +291,7 @@
         <script src="main.js"></script>
     </body>
     </html>
+
 
 
 
