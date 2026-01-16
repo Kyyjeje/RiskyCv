@@ -254,7 +254,20 @@
                 <a href="https://github.com/Kyyjeje"><i class="bx bxl-github"></i></a>
             </div>
         </div>
-    
+        <!-- Audio -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="https://qu.ax/vyNCX.mp3" type="audio/mpeg">
+  </audio>
+  <div style="position:fixed;bottom:20px;right:20px;">
+    <button onclick="toggleMusic()" class="btn"><i class="fa-solid fa-music"></i> Musik</button>
+  </div>
+
+  <script>
+    let music = document.getElementById("bgMusic");
+    function toggleMusic(){
+      if(music.paused){music.play();}else{music.pause();}
+    }
+
         <div class="contact-form">
             <form action="">
                 <input type="text" placeholder="Enter Your Name" required>
@@ -276,6 +289,7 @@
         <script src="main.js"></script>
     </body>
     </html>
+
 
 
 
