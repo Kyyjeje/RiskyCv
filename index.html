@@ -256,10 +256,20 @@
         </div>
         <body>
 
-<audio autoplay>
-        <source src="contoh.mp3" type="audio/mp3">
-</audio>
 
+  <!-- Audio -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="https://files.catbox.moe/4e8nkq.mp3" type="audio/mpeg">
+  </audio>
+  <div style="position:fixed;bottom:50px;right:50px;">
+    <button onclick="toggleMusic()" class="btn"><i class="fa-solid fa-music"></i> Musik</button>
+  </div>
+
+  <script>
+    let music = document.getElementById("bgMusic");
+    function toggleMusic(){
+      if(music.paused){music.play();}else{music.pause();}
+    }
             
 
         <div class="contact-form">
@@ -283,6 +293,7 @@
         <script src="main.js"></script>
     </body>
     </html>
+
 
 
 
