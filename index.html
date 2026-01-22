@@ -236,23 +236,19 @@
                 
             </div>
         </div>
-    <head>
-  <meta charset="UTF-8">
-  <title>Play Pause Musik</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <button id="playPauseBtn">▶ Play</button>
-
-  <audio id="music">
-    <source src="musik.mp3" type="audio/mpeg">
-    Browser kamu tidak mendukung audio.
+      <!-- Audio -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="https://qu.ax/vyNCX.mp3" type="audio/mpeg">
   </audio>
+  <div style="position:fixed;bottom:20px;right:20px;">
+    <button onclick="toggleMusic()" class="btn"><i class="fa-solid fa-music"></i> Musik</button>
+  </div>
 
-  <script src="script.js"></script>
-</body>
-    
+  <script>
+    let music = document.getElementById("bgMusic");
+    function toggleMusic(){
+      if(music.paused){music.play();}else{music.pause();}
+    }
    
 
     <section class="contact" id="contact">
@@ -297,6 +293,7 @@
         <script src="main.js"></script>
     </body>
     </html>
+
 
 
 
